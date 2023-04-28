@@ -16,7 +16,7 @@ socket.on('msg-server-2-client', function (data) {
 });
 
 socket.on('test-message', function (data) {
-    console.log(data);
+    console.log('[Server] ' + data);
 });
 
 function onConnect() {

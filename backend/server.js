@@ -15,10 +15,10 @@ io.on('connection', (socket) => {
     socket.on('test-message', (init_msg) => {
         // se sono qui dentro vuol dire che il client ha inviato
         // un msg al server sul socket (id => "test-message")
-        console.log('Messaggio di test: ', init_msg);
+        console.log('[Client] Messaggio di test: ', init_msg);
         // questo emette un messaggio di risposta al client che
         // mi ha contattato sul socket (id => "test-message")
-        io.emit('test-message', 'ho ricevuto il messaggio: ' + init_msg);
+        io.emit('test-message', 'Hello, client! (ho ricevuto il tuo msg: ' + init_msg + ' )');
     });
 
     socket.on('disconnect', () => {
